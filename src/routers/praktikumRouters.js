@@ -8,6 +8,11 @@ const praktikumControllers = require('../controllers/praktikumControllers')
 
 // disini
 app.get("/profil/:name/:age", praktikumControllers.profil)
-app.get("/bujur_sangkar", praktikumControllers.bujurSangkar)
+app.post("/", praktikumControllers.bujurSangkar)
+app.post("/celsius/:celsius", praktikumControllers.convertCelsius);
+app.post("/reamur/:reamur", praktikumControllers.convertReamur);
+app.post("/kelvin/:kelvin", praktikumControllers.convertKelvin);
+app.post("/fahrenheit/:fahrenheit", praktikumControllers.convertFahrenheit)
+
 
 module.exports = app
